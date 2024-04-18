@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pr13-18.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pr13-19.cpp">
+    <ClCompile Include="EndUser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Invtry.cpp">

@@ -128,8 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Invtry.cpp" />
-    <ClCompile Include="pr13-18.cpp" />
-    <ClCompile Include="pr13-19.cpp" />
+    <ClCompile Include="EndUser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Invtry.h" />

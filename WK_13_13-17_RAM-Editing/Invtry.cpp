@@ -6,28 +6,34 @@ using namespace std;
 Invtry record;
 int Invtry::createRecords()
 {
+    // Open the text file containing initial inventory data
+    ifstream initialData("records.txt");
+    if (!initialData) 
+    {
+        cout << "Error opening initial data file.";
+        return 0;
+    }
 
-    int numberBytesToWrite = sizeof(record);
-
-    // Create file object and open file
+    // Open the binary file to write
     fstream inventory("invtry.dat", ios::out | ios::binary);
-    if (!inventory)
+    if (!inventory) 
     {
         cout << "Error opening file.";
         return 0;
     }
 
-
-    // Now write the blank records
-    for (int count = 0; count < NUM_RECORDS; count++)
+    // Read data from the text file and write it to the binary file
+    while (initialData >> record.desc >> record.qty >> record.price) 
     {
-        cout << "Now writing record " << count << endl;
-        inventory.write(reinterpret_cast<char*>(&record), numberBytesToWrite);
-
+        inventory.write(reinterpret_cast<char*>(&record), sizeof(record));
     }
-    cout << numberBytesToWrite << " bytes were written to the file.\n";
-    //Close the file
+
+    cout << "Initial data written to the file.\n";
+
+    // Close the files
+    initialData.close();
     inventory.close();
+
     return 0;
 }
 

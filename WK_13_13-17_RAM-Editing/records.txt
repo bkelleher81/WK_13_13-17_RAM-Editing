@@ -1,4 +1,4 @@
-Red 1 1.11
+Obtuse 1 1.11
 Blue 2 2.22
 Green 3 3.33
 Yellow 4 4.44
